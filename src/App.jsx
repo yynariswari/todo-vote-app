@@ -1,13 +1,14 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
+import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
 
-export default function App() {
+function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/detail" element={<Detail />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/detail/:id" element={<DetailPage />} />
     </Routes>
   );
 }
+
+export default App;
