@@ -12,7 +12,7 @@ export default function Home() {
 
   const openDetail = (id) => {
     dispatch(selectTodo(id));
-    navigate("/detail");
+    navigate(`/detail/${id}`);
   };
 
   return (

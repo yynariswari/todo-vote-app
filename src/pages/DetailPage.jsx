@@ -5,13 +5,11 @@ import { useParams, useNavigate } from "react-router-dom";
 export default function DetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-
   const todos = useSelector((state) => state.todo.todos);
 
-  // Cari todo berdasarkan ID dari URL
-  const todo = todos.find((item) => item.id.toString() === id.toString());
+  const selectedTodo = todos.find((item) => String(item.id) === String(id));
 
-  if (!todo)
+  if (!selectedTodo)
     return (
       <p style={{ padding: 20 }}>
         Todo tidak ditemukan.{" "}
@@ -23,13 +21,13 @@ export default function DetailPage() {
     <div style={{ padding: 20 }}>
       <h2>Detail Todo</h2>
       <p>
-        <b>ID:</b> {todo.id}
+        <b>ID:</b> {selectedTodo.id}
       </p>
       <p>
-        <b>Title:</b> {todo.title}
+        <b>Title:</b> {selectedTodo.title}
       </p>
       <p>
-        <b>Votes:</b> {todo.votes}
+        <b>Votes:</b> {selectedTodo.votes}
       </p>
 
       <button onClick={() => navigate("/")}>Kembali</button>
