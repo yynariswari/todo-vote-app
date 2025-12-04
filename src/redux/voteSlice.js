@@ -1,7 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: ["Andy", "Budi", "Siti"],
+  users: [
+    "Adit Pratama",
+    "Rani Lestari",
+    "Bima Saputra",
+    "Salsa Ayu",
+    "Dito Wirawan",
+  ],
   currentUser: null,
 };
 

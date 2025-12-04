@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   todos: [
-    { id: 1, title: "Belajar Redux", votes: 0 },
-    { id: 2, title: "Cuci Motor", votes: 0 },
-    { id: 3, title: "Belanja Mingguan", votes: 0 },
+    { id: 1, title: "Belajar React Context", votes: 0 },
+    { id: 2, title: "Kerjakan Modul 32", votes: 0 },
+    { id: 3, title: "Setor Tugas todo list", votes: 0 },
   ],
   selectedTodo: null,
 };
